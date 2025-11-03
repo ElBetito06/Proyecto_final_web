@@ -1,124 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Hecho en Nuevo León</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="categoria.css">
-  <link rel="stylesheet" href="carrusel.css">
-  <link rel="stylesheet" href="pagina-producto.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalles del producto y reseñas - Hecho en Nuevo León">
+    <meta name="keywords" content="producto, artesanía, Nuevo León, compras locales">
+    <title>Detalles del Producto - Hecho en Nuevo León</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="categoria.css">
+    <link rel="stylesheet" href="carrusel.css">
+    <link rel="stylesheet" href="pagina-producto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
-<html>
     <body>
-        <header>
-            <img src="Logos/menu.png" alt="Menú de hamburguesa" class="barras">
-            <img src="Logos/movimiento-ciudadano.png" alt="Movimiento Ciudadano" class="logo">
-            <div class="espacio"></div>
-            <img src="Logos/favoritos.png" alt="Favoritos" class="favoritos">
-            <img src="Logos/carrito.png" alt="Carrito" class="carrito">
-            <form class="buscador" role="search">
-                <img src="Logos/lupa.png" alt="Buscar" class="lupa">
-                <span class="search-icon" aria-hidden="true"></span>
-                <input class="search-input" type="search" placeholder="Buscar algo en especial">
-            </form>  
+        <header class="site-header" role="banner">
+            <nav class="primary-nav" aria-label="Navegación principal">
+                <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                    <img src="Logos/menu.png" alt="" class="barras">
+                </button>
+                
+                <a href="/" class="brand">
+                    <img src="Logos/movimiento-ciudadano.png" alt="Movimiento Ciudadano - Inicio" class="logo">
+                </a>
+
+                <div class="nav-actions">
+                    <a href="/favoritos" class="nav-link" aria-label="Ver lista de favoritos">
+                        <img src="Logos/favoritos.png" alt="" class="favoritos">
+                        <span class="visually-hidden">Favoritos</span>
+                    </a>
+                    <a href="/carrito" class="nav-link" aria-label="Ver carrito de compras">
+                        <img src="Logos/carrito.png" alt="" class="carrito">
+                        <span class="visually-hidden">Carrito</span>
+                    </a>
+                </div>
+
+                <form class="search-form" role="search" aria-label="Buscar en el sitio">
+                    <div class="search-wrapper">
+                        <label for="search-input" class="visually-hidden">Buscar productos</label>
+                        <input type="search" id="search-input" class="search-input" 
+                               placeholder="Buscar algo en especial" aria-label="Buscar productos">
+                        <button type="submit" class="search-submit" aria-label="Realizar búsqueda">
+                            <img src="Logos/lupa.png" alt="" class="lupa">
+                        </button>
+                    </div>
+                </form>
+            </nav>
         </header>
 
-    <main> 
-        <h1>Producto</h1>
-        <div class="muestra-producto">
-            <img src="Logos/borrador.jpg" alt="Collar de Estrella" class="imagen">
-            <div class="info-producto">
-                <p class="precio">$100</p>
-                <button id="comprar">Comprar</button>
-                <button id="agregar-carrito">Agregar al carrito</button>
-            </div>
-        </div>
-        <div class="emprendedor">
-            <a href="emprendedor.html">
-                <h2>Emprendedor</h2>
-            </a>
-            <p id="descripcion">descripción blah</p>
-            <h3>Conoce más del vendedor</h3>
-            <div class="carrusel">
-                <div class="foto">
-                    <p class="titulo">producto1</p>
-                    <img src="Logos/borrador.jpg" alt="Comida">
-                </div>
+    <main id="contenido-principal" role="main"> 
+        <article class="product-detail">
+            <h1 class="product-title">Nombre del Producto</h1>
+            
+            <div class="product-showcase">
+                <figure class="product-image">
+                    <img src="Logos/borrador.jpg" alt="Vista detallada del producto" class="imagen">
+                    <figcaption class="visually-hidden">Vista detallada del producto</figcaption>
+                </figure>
 
-                <div class="foto">
-                <p class="titulo">producto2</p>
-                <img src="Logos/borrador.jpg" alt="Accesorios">
-                </div>
+                <div class="product-info">
+                    <div class="price-info">
+                        <p class="precio" aria-label="Precio del producto">
+                            <span class="currency visually-hidden">Precio: </span>
+                            $100 <span class="currency">MXN</span>
+                        </p>
+                    </div>
 
-                <div class="foto">
-                <p class="titulo">producto3</p>
-                <img src="Logos/borrador.jpg" alt="Ropa">
-            </div>
-        </div>
-
-        <div class="header-reviews">
-            <h3 id="titulo-reviews">Reseñas</h3>
-            <div class="estrellas">
-                <img src="Logos/estrella-llena.png" class="estrella">
-                <img src="Logos/estrella-llena.png" class="estrella">
-                <img src="Logos/estrella-llena.png" class="estrella">
-                <img src="Logos/estrella-llena.png" class="estrella">
-                <img src="Logos/estrella-vacia.png" class="estrella">
-            </div>
-        </div>
-
-        <div class="review">
-            <div class="texto-review">
-                <div class="usuario-estrellas">
-                    <span class="usuario">Tomás Zapata</span>
-                    <div class="estrellas">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-llena.png" class="estrella">
+                    <div class="product-actions">
+                        <button type="button" id="comprar" class="primary-button" aria-label="Comprar ahora">
+                            Comprar
+                        </button>
+                        <button type="button" id="agregar-carrito" class="secondary-button" aria-label="Agregar al carrito de compras">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
-                <p class="opinion">Desde que lo compré sentí que lo iba a volver a comprar</p>
-                </div>
-                    <img src="Logos/borrador.jpg" class="foto-review">
             </div>
-        </div>
+            <section class="seller-info" aria-labelledby="seller-title">
+                <h2 id="seller-title">
+                    <a href="emprendedor.html" class="seller-link">
+                        Emprendedor
+                    </a>
+                </h2>
+                <p id="descripcion" class="seller-description">descripción blah</p>
 
-        <div class="review">
-            <div class="texto-review">
-                <div class="usuario-estrellas">
-                    <span class="usuario">Luis Rodríguez</span>
-                    <div class="estrellas">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-llena.png" class="estrella">
-                        <img src="Logos/estrella-vacia.png" class="estrella">
+                <div class="other-products">
+                    <h3 id="other-products-title">Conoce más del vendedor</h3>
+                    <div class="product-carousel" role="region" aria-label="Otros productos del vendedor">
+                        <div class="carousel-items">
+                            <article class="carousel-item">
+                                <img src="Logos/borrador.jpg" alt="Descripción del producto 1" class="product-thumb">
+                                <h4 class="product-name">producto1</h4>
+                            </article>
+
+                            <article class="carousel-item">
+                                <img src="Logos/borrador.jpg" alt="Descripción del producto 2" class="product-thumb">
+                                <h4 class="product-name">producto2</h4>
+                            </article>
+
+                            <article class="carousel-item">
+                                <img src="Logos/borrador.jpg" alt="Descripción del producto 3" class="product-thumb">
+                                <h4 class="product-name">producto3</h4>
+                            </article>
+                        </div>
+                        <div class="carousel-controls" aria-label="Controles del carrusel">
+                            <button class="carousel-prev" aria-label="Ver producto anterior">
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-next" aria-label="Ver siguiente producto">
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <p class="opinion">Desde que lo compré sentí que lo iba a volver a comprar</p>
+            </section>
+
+            <section class="reviews-section" aria-labelledby="reviews-title">
+                <header class="reviews-header">
+                    <h2 id="reviews-title">Reseñas</h2>
+                    <div class="rating" aria-label="Calificación promedio de 4 de 5 estrellas">
+                        <div class="stars" role="img" aria-label="4 de 5 estrellas">
+                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                            <img src="Logos/estrella-vacia.png" alt="" class="estrella">
+                            <span class="visually-hidden">4 de 5 estrellas</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="reviews-list">
+                    <article class="review">
+                        <div class="review-content">
+                            <header class="review-header">
+                                <div class="reviewer-info">
+                                    <h3 class="reviewer-name">Tomás Zapata</h3>
+                                    <div class="rating" aria-label="Calificación: 5 de 5 estrellas">
+                                        <div class="stars" role="img" aria-label="5 de 5 estrellas">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <span class="visually-hidden">5 de 5 estrellas</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="review-body">
+                                <p class="review-text">Desde que lo compré sentí que lo iba a volver a comprar</p>
+                                <figure class="review-image">
+                                    <img src="Logos/borrador.jpg" alt="Imagen de la reseña del producto" class="foto-review">
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review">
+                        <div class="review-content">
+                            <header class="review-header">
+                                <div class="reviewer-info">
+                                    <h3 class="reviewer-name">Luis Rodríguez</h3>
+                                    <div class="rating" aria-label="Calificación: 4 de 5 estrellas">
+                                        <div class="stars" role="img" aria-label="4 de 5 estrellas">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-llena.png" alt="" class="estrella">
+                                            <img src="Logos/estrella-vacia.png" alt="" class="estrella">
+                                            <span class="visually-hidden">4 de 5 estrellas</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="review-body">
+                                <p class="review-text">Desde que lo compré sentí que lo iba a volver a comprar</p>
+                                <figure class="review-image">
+                                    <img src="Logos/borrador.jpg" alt="Imagen de la reseña del producto" class="foto-review">
+                                </figure>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                    <img src="Logos/borrador.jpg" class="foto-review">
-            </div>
-        </div>
-
-
+            </section>
+        </article>
     </main>
 
-    <footer>
-        <img src="Logos/instagram.png" alt="Instagram" class="social-icon">
-        <img src="Logos/facebook.png" alt="Facebook" class="social-icon">
-        <img src="Logos/tiktok.png" alt="TikTok" class="social-icon">
-        <div class="espacio"></div>
-        <h3 class="hechoNL">Hecho en Nuevo León</h3>
+    <footer class="site-footer" role="contentinfo">
+        <nav class="social-nav" aria-label="Redes sociales">
+            <ul class="social-links">
+                <li>
+                    <a href="https://instagram.com/hechoennl" class="social-link" aria-label="Síguenos en Instagram">
+                        <img src="Logos/instagram.png" alt="" class="social-icon">
+                        <span class="visually-hidden">Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com/hechoennl" class="social-link" aria-label="Síguenos en Facebook">
+                        <img src="Logos/facebook.png" alt="" class="social-icon">
+                        <span class="visually-hidden">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tiktok.com/@hechoennl" class="social-link" aria-label="Síguenos en TikTok">
+                        <img src="Logos/tiktok.png" alt="" class="social-icon">
+                        <span class="visually-hidden">TikTok</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright">
+            <span class="hechoNL">Hecho en Nuevo León</span>
+            <span class="visually-hidden">- Todos los derechos reservados</span>
+        </p>
     </footer>
     </body>
 </html>
