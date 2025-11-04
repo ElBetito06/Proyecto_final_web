@@ -3,7 +3,7 @@ body {
 }
 
 footer {
-  background-color: rgb(45, 35, 39);
+  background-color: rgba(246, 135, 41, 1);
   display: grid;
   grid-template-columns:auto auto auto 1fr auto;
   grid-template-areas: 
@@ -32,5 +32,5 @@ footer {
 .hechoNL {
   grid-area: hechoNL;
   font-family: 'Poppins', sans-serif;
-  color: rgba(246, 135, 41, 1);
+  color: white;
 }
